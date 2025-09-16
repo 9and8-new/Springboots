@@ -1,0 +1,56 @@
+설정에서 자동가져오기 import문 체크
+빌드도구에서 gradle설정. IntelliJ로 두개다 설정 및 Oracle OpenJDK 21.0.2설정
+구조(structuer)켜는법(ALT+7)
+Library(도구) vs FrameWork(환경)
+
+IOC(Inversion of Control,제어의 역전)
+DI (Dependency Injection,의존성 주입)
+@Component	-> ContextBean 생성
+@Configuratin	-> +setupfile
+@Controller	-> +MVC에서의 요구사항받는 Bean
+
+PARAM
+01 파라미터
+02 유효성
+03 서비스
+04 뷰로 이동(데이터만 전달 vs 데이터+Page)
+======================================
+09-03 한것들
+@RequestMapping
+@GetMapping
+@PostMapping
+
+@RequestParam
+@RequestBody
+@ModelAttribute //생략가능
+@PathVariable
+
+-------------------------------------------------------------
+09-12
+ORM이란?
+MyBatis이란?
+
+
+
+Mybatis 코드
+implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.5'
+testImplementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter-test:3.0.5'
+시작할때 테이블을 미리 만들어야함.
+
+데이터가 받는곳은 컨트롤러가 받음
+컨트롤러가 받아온 데이터를 서비스로 던져서 서비스실행
+서비스 내부에서 회원정보 저장이나 로그인했으면 
+session에 회원정보를 저장해서 다른 서비스에서 호출 가능한 형태로 변환
+마지막에 리턴값을 반환하고 서비스가 끝나면 컨트롤러로 돌아와서 이후 코드 진행
+-----------------------------------------------------------------------------------------------
+start.spring.io에서 각종 build.gradle 받아오기
+spring에 없으면 maven repository에서 받기
+Swagger란?
+API를 문서화하고, 테스트까지 할 수 있게 도와주는 도구
+
+포스트맨에서 확인
+http://localhost:8090/memo/param1?id=1&text=A&writer=A
+http://localhost:8090/memo/param2/1/A/B
+
+https://mangkyu.tistory.com/49 읽어보기
+
