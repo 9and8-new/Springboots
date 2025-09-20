@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>대구 돌발정보 확인</h1>
+<th:block th:each="item:${list}">
+    <p>
+    <p>도시명: <span th:text="${city}"></span></p>
+    <p>온도: <span th:text="${temp}"></span> ℃</p>
+    <p>날씨 상태: <span th:text="${weather}"></span></p>
+
+    </p>
+</th:block>
+</body>
+</html>
